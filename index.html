@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en-US">
 <head>
-    <title>DECORATOR V5</title>
+    <title>Blink</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/blink.css"
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="styles/ie-support.css"/>
@@ -43,9 +44,23 @@
 
     <section class="layout-title">
         <div class="layout-container container">
-            <a href="index.html" class="title-header title-header-large">Decorator V5</a>
-            <a href="index.html" class="title-header title-header-short">V5</a>
+            <a href="index.html" class="title-header title-header-large sr-only">Blink</a>
             <a href="https://www.ucsd.edu" class="title-logo">UC San Diego</a>
+            <div class="ds-container">
+
+              <div class="ds-date">
+                <p>Monday, March 12, 2020</p>
+              </div>
+
+              <div class="ds-status">
+                <p>
+                <span class="status-yellow"></span>
+                <span class="status-yellow"></span>
+                <span class="status-yellow"></span>
+                <strong>System Status:</strong> Some systems are slow</p>
+              </div>
+
+            </div>
         </div>
     </section>
 </header>
@@ -181,26 +196,77 @@
 
 <main class="layout-main" id="main-content" role="main">
 
-  <div class="container">
-    <div class="row">
-      <ol class="breadcrumb breadcrumbs-list">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="templates.html">Templates</a></li>
-          <li class="active">Two Columns</li>
-      </ol>
+  <div class="jumbotron blink-jumbosearch">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <h1>Welcome to the UC San Diego Intranet</h1>
+            <input type="search" id="blinksearch" name="blinksearch" placeholder="Search Blink">
+            <div id="button-container" class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <button type="button" class="btn">Staff Directory</button>
+                </div>
+                <div class="col-md-4">
+                  <button type="button" class="btn">Search All UCSD</button>
+                </div>
+                <div class="col-md-4">
+                  <button type="button" class="btn">Human Resources</button>
+                </div>
+              </div>
+            </div>
+            <p>Can’t find what you’re looking for? <a href="#">Check the Service Hub</a>.</p>
+          </div>
+        </div>
     </div>
   </div>
 
-  <section class="container">
+
+  <section class="container news-feed">
     <div class="row">
 
-      <div class="col-md-12">
-        <h1>Decorator Version 5</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="col-md-4">
+        <img class="img-responsive" src="img/homepage/news-1.jpg">
+        <h2 class="news-headline">When will we end global warming?</h2>
+        <p>One of the world’s top experts on mitigating climate change</p>
       </div>
+      <div class="col-md-4">
+        <img class="img-responsive" src="img/homepage/news-2.jpg">
+        <h2 class="news-headline">First recording of a blue whale’s heart</h2>
+        <p>Scientists report first recording of blue whale heart in the wild</p>
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive" src="img/homepage/news-3.jpg">
+        <h2 class="news-headline">Meditation can help you make fewer mistakes</h2>
+        <p>Twenty minutes of meditation could help you be more focused</p>
+      </div>
+
+      <div class="col-md-12 text-right more-news"><a href="#">News Archive</a></div>
 
     </div>
   </section>
+
+  <div class="jumbotron blink-toolset">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="toolset-container">
+            <h3 class="toolset-headline">Announcements & Deadlines</h2>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="toolset-container">
+            <h3 class="toolset-headline">Tools</h2>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="toolset-container">
+            <h3 class="toolset-headline">Launcher</h2>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
 
 </main>
 
@@ -231,8 +297,6 @@
 <script src="scripts/jquery.min.js"></script>
 
 <script src="scripts/bootstrap.min.js"></script>
-
-<script src="https://www.ucsd.edu/common/_emergency-broadcast/message.js"></script>
 
 
 <script src="scripts/vendor.min.js"></script>
