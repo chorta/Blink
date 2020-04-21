@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Header Elements */
 .layout-title {
   height: 100px;
@@ -33,7 +34,7 @@
 
 /* Jumbotron Search */
 .blink-jumbosearch {
-  background: url(../img/search-trident.jpg) 0px -150px no-repeat;
+  background: url(../img/homepage/scripps-pier-at-sunset.jpg) 0px -150px no-repeat;
   height: auto;
   margin: 0 auto 40px auto;
   text-align: center;
@@ -98,7 +99,6 @@
   height: auto;
   margin: 40px auto 0 auto;
   padding: 40px 0 !important;
-  text-align: center;
 }
 .blink-toolset h1 {
   color: #fff;
@@ -110,13 +110,13 @@
 }
 
 .toolset-headline {
-  font-size: 19px;
-  font-family: "Helvetica" sans-serif !important;
-  font-weight: lighter !important;
+  font-size: 20px;
+  font-weight: normal !important;
   text-transform: none !important;
   text-align: left;
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
+  margin-bottom: 20px !important;
 }
 
 .toolset-container {
@@ -124,7 +124,65 @@
   min-height: 420px;
   padding: 15px 25px;
 }
+.toolset-container dd {
+  margin-bottom: 15px;
+}
+.toolset-container > .panel-group > .panel {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.toolset-container > .panel-group > .panel > .panel-heading {
+  border: 0;
+  padding: 15px 0;
+}
+.toolset-container > .panel-group > .panel > .panel-heading > .panel-title {
+  font-weight: normal;
+  text-transform: capitalize;
+  text-align: left;
+}
+.toolset-container > .panel-group > .panel > .panel-heading > .panel-title a {
+  margin-left: 10px;
+}
+.toolset-container > .panel-group > .panel > .panel-collapse > .panel-body {
+  border: 0;
+}
+.toolset-container > .panel-group > .panel > .panel-collapse ul {
+  padding-left: 10px;
+  list-style-type: none;
+}
+.toolset-container > .panel-group > .panel > .panel-collapse ul li {
+  padding: 5px 0;
+}
+.toolset-container > .panel-group.panel-title h5 {
+  color: #182B49;
+  font-size: 16px;
+}
 
+.toolset-panel {
+  text-transform: none !important;
+  text-align: left;
+}
+
+.launcher-logo {
+  padding: 30px;
+}
+
+/*Panel Arrows */
+.panel-heading .accordion-toggle:after {
+  /* symbol for "opening" panels */
+  font-family: "Glyphicons Halflings";
+  content: "";
+  float: left;
+  color: #C69214;
+}
+
+.panel-heading .accordion-toggle.collapsed:after {
+  content: "";
+}
+
+/* End Panel Arrows */
 /**
  * placeholder-loading v0.2.5
  * Author: Zalog (https://www.zalog.ro/)
