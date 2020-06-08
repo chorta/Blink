@@ -1,6 +1,6 @@
-@import 'layout/navigation';
+@import 'abstracts/variables';
 
-$default: #000;
+@import 'layout/navigation';
 
 
 /* Header Elements */
