@@ -38,6 +38,7 @@
 <header class="layout-header">
 	<a class="sr-only" href="#main-content">Skip to main content</a>
 	<div id="uc-emergency"></div>
+  <div id="tdr_login"></div>
 	<section class="layout-login">
 		<div class="layout-container"></div>
 	</section>
@@ -470,38 +471,20 @@
         </div>
         <div class="col-md-4">
           <div class="toolset-container">
-            <h3 class="toolset-headline">Launcher</h2>
-
-            <div class="row">
-              <div class="col-md-4 launcher-logo">
-                <img class="img-responsive" src="img/homepage/zoom.png">
-              </div>
-              <div class="col-md-4 launcher-logo">
-                <img class="img-responsive" src="img/homepage/outlook.png">
-              </div>
-              <div class="col-md-4 launcher-logo">
-                <img class="img-responsive" src="img/homepage/slack.png">
-              </div>
-
-              <div class="col-md-4 launcher-logo">
-                <img class="img-responsive" src="img/homepage/google-drive.png">
-              </div>
-              <div class="col-md-4 launcher-logo">
-                <img class="img-responsive" src="img/homepage/onedrive.png">
-              </div>
-              <div class="col-md-4 launcher-logo">
-                <img class="img-responsive" src="img/homepage/teams.png">
-              </div>
-            </div>
+            <h3 class="toolset-headline">My Blink</h2>
 
 
-          </div>
+                <span class="styled" id="_myblink_toolbox">
+                  <a href="#">Activate MyBlink</a>
+                </span>
+
         </div>
         </div>
     </div>
   </div>
 
 </main>
+
 
 <footer class="footer">
 	<div class="container">
@@ -531,10 +514,45 @@
 
 <script src="scripts/bootstrap.min.js"></script>
 
-
 <script src="scripts/vendor.min.js"></script>
 
 <script src="scripts/base.min.js"></script>
+
+
+
+<script src="https://blink.ucsd.edu/_resources/js/sso-manager.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+function jsonpCallback(jsonStr) {
+        var json = JSON.parse(jsonStr);
+        $('#_myblink_toolbox').html(json.message);
+    }
+
+function myBlinkLogout() {
+    alert("click");
+    // delete cookie
+    document.cookie = '_myblink_user=; Path=/; domain=.ucsd.edu; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    $.ajax('https://act.ucsd.edu/myblink-client/bookmarks/j-logout.htm');
+}
+</script>
+<script src="https://act.ucsd.edu/myblink-client/bookmarks/getItemsV2.htm" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$("#_myblink_toolbox > div > div.span12.mb-right > ul > li:nth-child(5) > a").text(function () {
+    return $(this).text().replace("of MyBlink", "");
+})
+
+
+</script>
+
+<script type="text/javascript">
+  $(".toolset-container").matchHeight({
+    property: 'min-height'
+  });
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,37 @@
+.layout-title {
+  height: 100px;
+}
+
+.title-logo {
+  float: left;
+  background: url(https://blink.ucsd.edu/_resources/images/blink-logo-x2.png);
+  background-size: 122px;
+  background-repeat: no-repeat;
+}
+
+/****** Date and Status Component */
+
+.ds-container {
+  width: 325px;
+  display: block;
+  float: right;
+  text-align: right;
+}
+
+.ds-date p {
+  margin: 0;
+}
+
+.status-yellow {
+  background-color: #e6b540;
+  height: 7px;
+  width: 7px;
+  display: block;
+  margin: 10px 2px;
+  float: left;
+  border-radius: 10px;
+}
+
+a.title-header {
+    display: none;
+}

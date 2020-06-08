@@ -1,0 +1,101 @@
+/****** Bread Crubm Adjustments */
+
+.breadcrumb {
+    margin: 20px 0;
+}
+
+
+/****** Last Updated */
+
+
+.article_info {
+    background: #eeeeee59;
+    overflow: hidden;
+    padding: 10px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.article_updated_at {
+    width: 65%;
+    float: left;
+}
+
+.article_feedback {
+    width: 25%;
+    float: right;
+    text-align: right;
+}
+
+@media only screen and (max-width: 576px) {
+
+      .article_updated_at  {
+        margin-bottom: 10px;
+      }
+
+    .article_updated_at, .article_feedback  {
+        text-align: left;
+        float: left;
+        width:100%;
+
+    }
+
+}
+
+/****** FAQ Template */
+
+#blink_faq_content h2  {
+    margin-top: 1em;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq_question  {
+    color: #034F80;
+    cursor: pointer;
+    padding: 5px 10px 5px 30px;
+    background: #fff url(../images/faq_sprite.gif) no-repeat scroll 0 5px;
+    margin: 0;
+}
+
+.faq_question:hover {
+    background-color: aliceblue;
+}
+
+.faq_answer  {
+    padding: 5px 10px 5px 30px;
+    background: #E2E9F3 url(../images/faq_sprite.gif) no-repeat scroll 0 -95px;
+}
+
+
+.faq_expand_all  {
+    text-decoration: none;
+    color: #666;
+    padding-left: 10px;
+    background: #fff url(../images/blink_sprite.gif) 0 0px no-repeat;
+}
+
+.faq_all_expanded  {
+     background: #fff url(../images/blink_sprite.gif) 0 -25px no-repeat;
+}
+
+.faq_expand_all:hover  {
+    text-decoration: underline;
+}
+
+.faq_expand_some  {
+    float: right;
+    font-size: 65%;
+    font-weight: normal;
+    text-decoration: none;
+    color: #666;
+    padding-left: 10px;
+    background: #fff url(../images/blink_sprite.gif) 0 0px no-repeat;
+}
+
+.faq_some_expanded  {
+     background: #fff url(../images/blink_sprite.gif) 0 -25px no-repeat;
+}
+
+.faq_expand_some:hover  {
+    text-decoration: underline;
+}
