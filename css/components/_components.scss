@@ -4,16 +4,40 @@
     margin: 20px 0;
 }
 
+#faculty-staff-badge {
+  display: inline;
+  font-weight: bold;
+  margin-left: -15px;
+  margin-right: 5px;
+  padding: 5px;
+  width: 115px;
+
+    a {
+      color: #ffac05;
+
+      &:hover {
+        text-decoration: none !important;
+      }
+
+    }
+
+    .fs-badge-f,.fs-badge-s {
+      color: #006a95;
+    }
+
+}
 
 /****** Last Updated */
 
 
 .article_info {
-    background: #eeeeee59;
     overflow: hidden;
-    padding: 10px;
+    padding: 5px;
     margin: 20px 0;
     width: 100%;
+    font-size: 13px;
+    color: #636363;
+    border-bottom: 1px solid #eee;
 }
 
 .article_updated_at {
@@ -98,4 +122,88 @@
 
 .faq_expand_some:hover  {
     text-decoration: underline;
+}
+
+/****** Drawer template */
+
+
+.drawer-wrapper {
+  clear: both;
+}
+
+
+/****** Simple Contact Module */
+
+
+.gray-trdnt {
+    background-image: url(../images/bg-light-gray-trident.png);
+    background-position: 0 -75px;
+    margin: 20px 0;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+
+    p {
+      margin-bottom: 0;
+    }
+}
+
+
+/****** Disclaimer Text */
+
+
+.disclaimer-text {
+  clear: both;
+  font-size: 90%;
+  color: #666;
+  font-style: italic;
+}
+
+/***** Release Notes */
+
+#blink_release_content h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.release_name {
+    color: #034f80;
+    cursor: pointer;
+    padding: 5px 10px 5px 5px;
+    margin: 0;
+    background: #fff;
+}
+
+.release_desc {
+    background: #e2e9f3;
+    padding: 10px;
+
+    ul > li {
+      margin-bottom: 0;
+    }
+
+}
+
+.new:after {
+    content: "new";
+    background: #f2ad23;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.release_expand_all {
+    text-decoration: none;
+    color: #666;
+    padding-left: 10px;
+    background: #fff url(../images/blink_sprite.gif) 0 0 no-repeat;
+}
+
+.release_expand_some {
+    float: right;
+    font-weight: 400;
+    text-decoration: none;
+    color: #666;
+    padding-left: 10px;
+    background: #fff url(../images/blink_sprite.gif) 0 0 no-repeat;
 }

@@ -11,26 +11,9 @@
     <meta name="PAGETITLE" content="School of Global Policy & Strategy">
     <meta name="DESCRIPTION" content="A community dedicated to the advancement of knowledge through teaching, research and engagement.">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/base.min.css">
-    <link rel="stylesheet" href="css/blink.css">
-
-    <!--[if lt IE 9]>
-    <link rel="stylesheet" href="styles/ie-support.css"/>
-    <![endif]-->
-
-    <!-- Begin site-specific CSS files -->
-
-    <!-- End site-specific CSS files -->
-
-    <script src="scripts/modernizr.min.js"></script>
-
-    <!--[if lt IE 9]>
-    <script src="vendor/respond/dest/respond.min.js"></script>
-    <link href="https://cdn.ucsd.edu/cms/decorator-4/scripts/cross-domain/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
-    <link href="img/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
-    <script src="scripts/ucsd/respond-proxy.js"></script>
-    <![endif]-->
+    <link href="https://cdn.ucsd.edu/cms/decorator-5/styles/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.ucsd.edu/cms/decorator-5/styles/base.min.css" rel="stylesheet"/>
+    <link href="css/blink.css" rel="stylesheet">
 
 </head>
 <body>
@@ -44,151 +27,399 @@
 	</section>
 
     <section class="layout-title">
-        <div class="layout-container container">
+        <div class="container">
             <a href="index.html" class="title-header title-header-large sr-only">Blink</a>
-            <a href="https://www.ucsd.edu" class="title-logo">UC San Diego</a>
-            <div class="ds-container">
+            <a href="https://www.ucsd.edu" class="title-logo">Blink</a>
 
-              <div class="ds-date">
-                <p>Monday, March 12, 2020</p>
+            <div class="sb-container">
+
+              <div class="ds-container">
+
+                <div class="system-status">
+                  <p>
+                    <strong>System Status:&nbsp;</strong>
+                    <span class="system-status-message"> </span>
+                  </p>
+                </div>
+
+                <div class="si-container">
+                  <a id="status-link" href="https://status.ucsd.edu/" alt="">
+                    <span class="status-indicator"></span>
+                    <span class="status-indicator"></span>
+                    <span class="status-indicator"></span>
+                  </a>
+                </div>
+
               </div>
 
-              <div class="ds-status">
-                <p>
-                <span class="status-yellow"></span>
-                <span class="status-yellow"></span>
-                <span class="status-yellow"></span>
-                <strong>System Status:</strong> Some systems are slow</p>
-              </div>
+              <form action="/search/index.html" aria-label="Search Box" class="navbar-form navbar-right navbar-search no-gutter search-form" id="cse-search-box" method="get" role="search">
+                <label class="radio-inline" for="searchUCSD">
+                  <input aria-label="Search Blink" checked="checked" id="searchUCSD" name="search-scope" role="radiogroup" type="radio" value="cascade-cwp" /> Search Blink
+                </label>
+                <label class="radio-inline" for="searchFaculty">
+                  <input aria-label="Search Faculty and Staff" id="searchFaculty" name="search-scope" role="radiogroup" type="radio" value="faculty-staff" /> Search Faculty/Staff
+                </label>
+                <div class="input-group">
+                  <input aria-label="Search Box" class="form-control input-search directorySearch facultySearch" data-id="inputSearch" id="q" name="search-term" placeholder="Search Blink" type="search" value="" />
+                  <input name="site" type="hidden" value="cascade-cwp" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary search-icon search-expand" id="search-icon-button" onclick="submitForm()" type="button">
+                      <img alt="search-icon" class="img-responsive" src="https://www.ucsd.edu/_resources/img/icon_search.png" />
+                    </button>
+                  </span>
+                </div>
 
+                <input class="sr-only" type="submit" value="Submit" />
+              </form>
             </div>
+
+
+
+
+
         </div>
     </section>
 </header>
 
-<!-- mobile offcanvas nav -->
-<div class="navmenu navmenu-default navmenu-fixed-left offcanvas" style="">
-
-    <ul class="nav navbar-nav navbar-right">
-      <li>
-        <div class="search">
-              <button class="search-toggle btn-default">
-                  <span class="glyphicon glyphicon-search"></span> <span class="caret"></span>
-              </button>
-
-              <div class="search-content" id="search">
-                  <form action="https://act.ucsd.edu/cwp/tools/search-redir" method="get" id="cse-site-search">
-                      <select class="search-scope" name="search-scope">
-                          <option value="default_collection">All UCSD Sites</option>
-                          <option value="faculty-staff">Faculty/Staff</option>
-                      </select>
-
-                      <div class="input-group">
-                          <input placeholder="Search..." type="search" class="form-control search-term"
-                          id="q" name="search-term">
-                      </div>
-                  </form>
-              </div>
-          </div>
-        </li>
-    </ul>
-
-
-	<ul class="nav navmenu-nav">
-		<li class="active"><a href="/index.html">Home</a></li>
-		<li class="dropdown open">
-		  	<a href="templates/index.html" class="dropdown-toggle">Templates <b class="caret"></b></a>
-		  	<ul class="dropdown-menu navmenu-nav">
-          <li><a href="templates/blank-slate.html">Blank Slate</a></li>
-          <li><a href="templates/homepage.html">Homepage</a></li>
-          <li><a href="templates/two-column.html">Two Column</a></li>
-          <li><a href="templates/three-column.html">Three Column</a></li>
-		  	</ul>
-		</li>
-		<li><a href="kitchen-sink/index.html">Kitchen Sink</a></li>
-		<li class="dropdown open">
-			<a href="widgets/index.html" class="dropdown-toggle">Widgets <b class="caret"></b></a>
-			<ul class="dropdown-menu navmenu-nav">
-        <li><a href="widgets/fullcalendar.html">FullCalendar</a></li>
-        <li><a href="widgets/datatables.html">DataTables</a></li>
-        <li><a href="widgets/wizard.html">Wizard</a></li>
-        <li><a href="widgets/maxchar.html">MaxChar</a></li>
-			</ul>
-		</li>
-	</ul>
-</div>
-<!-- end mobile offcanvas nav -->
 
 <!-- navbar -->
-<nav class="navbar navbar-default navbar-static-top">
-	<div class="container">
-		<div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body" aria-expanded="false" aria-controls="navbar">
-      			    <span class="sr-only">Toggle navigation</span>
-
-      					<div class="col-sm-1 mobile-nav-bars">
-      				    <span class="icon-bar"></span>
-      				    <span class="icon-bar"></span>
-      				    <span class="icon-bar"></span>
-         				</div>
-          			<div class="col-sm-1 mobile-nav-icon">
-                      MENU
-      			    </div>
-      </button>
-      <div class="col-sm-4 pull-right visible-xs-block">
-        <img src="http://cdn.ucsd.edu/developer/decorator/5.0.2/img/ucsd-footer-logo-white.png" alt="" class="img-responsive header-logo" />
-      </div>
+<nav class="navbar navbar-default" data-module="nav">
+	<div class="container-fluid header-wrap">
+		<div class="container">
+			<div class="navbar-header">
+				<a aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar-collapse-grid" data-toggle="collapse" href="#">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<!-- mobile search dropdown -->
+				<a class="search-icon search-expand dropdown-toggle visible-xs visible-sm" data-toggle="dropdown" href="#">
+					<span class="search-icon"></span>
+				</a>
+				<div class="dropdown-menu dropdown-search">
+					<form action="/search/index.html" aria-label="Mobile Search Box" class="navbar-search form-inline mobile-search-form" role="search">
+						<div class="input-group nav-search-mobile">
+							<input aria-label="Mobile Search Box" class="form-control input-search is-mobile" data-id="inputSearchMobile" id="q" name="search-term" placeholder="Search in UC San Diego" type="search" />
+							<input name="site" type="hidden" value="cascade-cwp" />
+							<span class="input-group-btn">
+								<button class="btn btn-primary search-icon search-expand mobile-search-icon" type="button">
+									<img alt="search-icon" src="https://www.ucsd.edu/_resources/img/icon_search.png" />
+								</button>
+							</span>
+						</div>
+						<label class="radio-inline" for="searchUCSDMobile">
+							<input aria-label="Search UC San Diego on Mobile Device" checked="checked" id="searchUCSDMobile" name="t" onclick="setSearch('web')" role="radiogroup" type="radio" value="web" /> Search Blink
+						</label>
+						<label class="radio-inline" for="searchFacultyMobile">
+							<input aria-label="Search Faculty and Staff on Mobile Device" id="searchFacultyMobile" name="t" onclick="setSearch('directory')" role="radiogroup" type="radio" value="directory" /> Search Faculty/Staff
+						</label>
+						<input class="sr-only" type="submit" value="Submit" />
+					</form>
+				</div>
+			</div>
 		</div>
-
-		<div id="navbar" class="navbar-collapse collapse">
-		  <ul class="nav navbar-nav">
-		    <li class="active"><a href="index.html">Home</a></li>
-		    <li class="dropdown">
-		    	<a href="templates/index.html" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Templates <span class="caret"></span></a>
-		    	<ul class="dropdown-menu">
-            <li><a href="templates/homepage.html">Homepage</a></li>
-            <li><a href="templates/blank-slate.html">Blank Slate</a></li>
-			    	<li><a href="templates/two-column.html">Two Column</a></li>
-            <li><a href="templates/three-column.html">Three Column</a></li>
-		    	</ul>
-		    </li>
-		    <li><a href="kitchen-sink/index.html">Kitchen Sink</a></li>
-		    <li class="dropdown">
-          <a href="widgets/index.html" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Widgets <span class="caret"></span></a>
-		    	<ul class="dropdown-menu">
-	                <li><a href="widgets/fullcalendar.html">FullCalendar</a></li>
-	                <li><a href="widgets/datatables.html">DataTables</a></li>
-	                <li><a href="widgets/wizard.html">Wizard</a></li>
-	                <li><a href="widgets/maxchar.html">MaxChar</a></li>
-	            </ul>
-		    </li>
-		  </ul>
-
-		  <div class="btn-nav"></div>
-
-		  <ul class="nav navbar-nav navbar-right">
-		    <li>
-			    <div class="search">
-		            <button class="search-toggle btn-default">
-		                <span class="glyphicon glyphicon-search"></span> <span class="caret"></span>
-		            </button>
-
-		            <div class="search-content" id="search">
-		                <form action="http://act.ucsd.edu/cwp/tools/search-redir" method="get" id="cse-site-search">
-		                    <select class="search-scope" name="search-scope">
-		                        <option value="default_collection">All UCSD Sites</option>
-		                        <option value="faculty-staff">Faculty/Staff</option>
-		                    </select>
-
-		                    <div class="input-group">
-		                        <input placeholder="Search..." type="search" class="form-control search-term"
-		                        id="q" name="search-term">
-		                    </div>
-		                </form>
-		            </div>
-		        </div>
-	        </li>
-		  </ul>
+	</div>
+	<div class="container-fluid nav-wrap">
+		<div class="container">
+			<div class="navbar-collapse collapse" id="navbar-collapse-grid">
+				<!-- standard nav small -->
+				<ul class="nav navbar-nav small-nav visible-xs visible-sm">
+					<li class="dropdown">
+						<div class="btn-group navbar-btn">
+							<a href="http://ucsd.edu/about/index.html">About</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<img alt="arrow" src="https://www.ucsd.edu/_resources/img/icon_arrow.png" />
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="site://UCSD/about/visiting-tours/index">Visiting &amp; Tours</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/timeline/index.html">History</a>
+								</li>
+								<li>
+									<a href="http://ucsdnews.ucsd.edu/">News</a>
+								</li>
+								<li>
+									<a href="http://jobs.ucsd.edu/">Jobs @ UC San Diego</a>
+								</li>
+								<li>
+									<a href="http://chancellor.ucsd.edu/">Office of the Chancellor</a>
+								</li>
+								<li>
+									<a href="http://health.ucsd.edu/">UC San Diego Health</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="btn-group navbar-btn">
+							<a href="http://ucsd.edu/academics/">Academics</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<img alt="arrow" src="https://www.ucsd.edu/_resources/img/icon_arrow.png" />
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://students.ucsd.edu">TritonLink</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/academics-detail.html">Undergraduate Degrees &amp; Programs</a>
+								</li>
+								<li>
+									<a href="https://apply.grad.ucsd.edu/departments">Graduate Degrees &amp; Programs</a>
+								</li>
+								<li>
+									<a href="http://provost.ucsd.edu/colleges/">Colleges</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/academics/academic-success.html">Student Academic Success</a>
+								</li>
+								<li>
+									<a href="http://digitallearning.ucsd.edu/">Digital Learning</a>
+								</li>
+								<li>
+									<a href="http://extension.ucsd.edu/">Extension</a>
+								</li>
+								<li>
+									<a href="http://library.ucsd.edu/">Library</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="btn-group navbar-btn">
+							<a href="http://ucsd.edu/admissions-aid/index.html">Admissions and Aid</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<img alt="arrow" src="https://www.ucsd.edu/_resources/img/icon_arrow.png" />
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://admissions.ucsd.edu/freshman/">Freshman Admissions</a>
+								</li>
+								<li>
+									<a href="http://admissions.ucsd.edu/transfer/">Transfer Admissions</a>
+								</li>
+								<li>
+									<a href="http://grad.ucsd.edu/admissions/">Graduate Admissions</a>
+								</li>
+								<li>
+									<a href="https://meded.ucsd.edu/index.cfm/asa/admissions/">School of Medicine</a>
+								</li>
+								<li>
+									<a href="https://pharmacy.ucsd.edu/prospective/admissions.shtml">Skaggs School of Pharmacy</a>
+								</li>
+								<li>
+									<a href="https://students.ucsd.edu/finances/financial-aid/">Financial Aid</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="btn-group navbar-btn">
+							<a href="http://ucsd.edu/research-innovation/index.html">Research and Innovation</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<img alt="arrow" src="https://www.ucsd.edu/_resources/img/icon_arrow.png" />
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://ucsd.edu/research-innovation/research-initiatives.html">Research Initiatives</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/research-innovation/student-opportunities.html">Student Opportunities</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="btn-group navbar-btn">
+							<a href="http://ucsd.edu/campus-life/index.html">Campus Life</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<img alt="arrow" src="https://www.ucsd.edu/_resources/img/icon_arrow.png" />
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://ucsd.edu/campus-life/organizations/index.html">Organizations</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/campus-life/diversity/index.html">Diversity</a>
+								</li>
+								<li>
+									<a href="http://calendar.ucsd.edu/">Events</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/campus-life/student-support.html">Student Support</a>
+								</li>
+								<li>
+									<a href="http://studyabroad.ucsd.edu/">Study Abroad</a>
+								</li>
+								<li>
+									<a href="http://career.ucsd.edu/">Career &amp; Internship</a>
+								</li>
+								<li>
+									<a href="http://athletics.ucsd.edu">Athletics</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="btn-group navbar-btn">
+							<a href="http://ucsd.edu/support/index.html">Support UC San Diego</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<img alt="arrow" src="https://www.ucsd.edu/_resources/img/icon_arrow.png" />
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://alumni.ucsd.edu/">Alumni</a>
+								</li>
+								<li>
+									<a href="http://giving.ucsd.edu/">Giving</a>
+								</li>
+								<li>
+									<a href="http://foundation.ucsd.edu/">Foundation</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- large nav -->
+				<div class="main-nav">
+					<ul class="nav navbar-nav menu large-nav hidden-xs hidden-sm">
+						<li class="nav-group nav-group-sm">
+							<a href="http://ucsd.edu/about/index.html">About</a>
+							<ul class="list-unstyled">
+								<li>
+									<a href="site://UCSD/about/visiting-tours/index">Visiting &amp; Tours</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/timeline/index.html">History</a>
+								</li>
+								<li>
+									<a href="http://ucsdnews.ucsd.edu/">News</a>
+								</li>
+								<li>
+									<a href="http://jobs.ucsd.edu/">Jobs @ UC San Diego</a>
+								</li>
+								<li>
+									<a href="http://chancellor.ucsd.edu/">Office of the Chancellor</a>
+								</li>
+								<li>
+									<a href="http://health.ucsd.edu/">UC San Diego Health</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-group nav-group-sm">
+							<a href="http://ucsd.edu/academics/">Academics</a>
+							<ul class="list-unstyled">
+								<li>
+									<a href="http://students.ucsd.edu">TritonLink</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/academics-detail.html">Undergraduate Degrees &amp; Programs</a>
+								</li>
+								<li>
+									<a href="https://apply.grad.ucsd.edu/departments">Graduate Degrees &amp; Programs</a>
+								</li>
+								<li>
+									<a href="http://provost.ucsd.edu/colleges/">Colleges</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/academics/academic-success.html">Student Academic Success</a>
+								</li>
+								<li>
+									<a href="http://digitallearning.ucsd.edu/">Digital Learning</a>
+								</li>
+								<li>
+									<a href="http://extension.ucsd.edu/">Extension</a>
+								</li>
+								<li>
+									<a href="http://library.ucsd.edu/">Library</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-group">
+							<a href="http://ucsd.edu/admissions-aid/index.html">Admissions
+								<br /> and Aid
+							</a>
+							<ul class="list-unstyled">
+								<li>
+									<a href="http://admissions.ucsd.edu/freshman/">Freshman Admissions</a>
+								</li>
+								<li>
+									<a href="http://admissions.ucsd.edu/transfer/">Transfer Admissions</a>
+								</li>
+								<li>
+									<a href="http://grad.ucsd.edu/admissions/">Graduate Admissions</a>
+								</li>
+								<li>
+									<a href="https://meded.ucsd.edu/index.cfm/asa/admissions/">School of Medicine</a>
+								</li>
+								<li>
+									<a href="https://pharmacy.ucsd.edu/prospective/admissions.shtml">Skaggs School of Pharmacy</a>
+								</li>
+								<li>
+									<a href="https://students.ucsd.edu/finances/financial-aid/">Financial Aid</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-group nav-group-lg">
+							<a href="http://ucsd.edu/research-innovation/index.html">Research and
+								<br /> Innovation
+							</a>
+							<ul class="list-unstyled">
+								<li>
+									<a href="http://ucsd.edu/research-innovation/research-initiatives.html">Research Initiatives</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/research-innovation/student-opportunities.html">Student Opportunities</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-group nav-group-sm">
+							<a href="http://ucsd.edu/campus-life/index.html">Campus Life</a>
+							<ul class="list-unstyled">
+								<li>
+									<a href="http://ucsd.edu/campus-life/organizations/index.html">Organizations</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/campus-life/diversity/index.html">Diversity</a>
+								</li>
+								<li>
+									<a href="http://calendar.ucsd.edu/">Events</a>
+								</li>
+								<li>
+									<a href="http://ucsd.edu/campus-life/student-support.html">Student Support</a>
+								</li>
+								<li>
+									<a href="http://studyabroad.ucsd.edu/">Study Abroad</a>
+								</li>
+								<li>
+									<a href="http://career.ucsd.edu/">Career &amp; Internship</a>
+								</li>
+								<li>
+									<a href="http://athletics.ucsd.edu">Athletics</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-group">
+							<a href="http://ucsd.edu/support/index.html">Support
+								<br /> UC San Diego
+							</a>
+							<ul class="list-unstyled">
+								<li>
+									<a href="http://alumni.ucsd.edu/">Alumni</a>
+								</li>
+								<li>
+									<a href="http://giving.ucsd.edu/">Giving</a>
+								</li>
+								<li>
+									<a href="http://foundation.ucsd.edu/">Foundation</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </nav>
@@ -201,22 +432,14 @@
     <div class="container">
       <div class="row">
           <div class="col-md-12">
-            <h1>Welcome to the UC San Diego Intranet</h1>
+            <h1 id="personal-greeting"></h1>
             <input type="search" id="blinksearch" name="blinksearch" placeholder="Search Blink">
             <div id="button-container" class="container">
               <div class="row">
-                <div class="col-md-4">
-                  <button type="button" class="btn">Staff Directory</button>
-                </div>
-                <div class="col-md-4">
-                  <button type="button" class="btn">Search All UCSD</button>
-                </div>
-                <div class="col-md-4">
-                  <button type="button" class="btn">Human Resources</button>
-                </div>
+                <p>Can’t find what you’re looking for? <a href="#">Check the Service Hub</a>.</p>
               </div>
             </div>
-            <p>Can’t find what you’re looking for? <a href="#">Check the Service Hub</a>.</p>
+
           </div>
         </div>
     </div>
@@ -289,7 +512,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="toolset-container">
-            <h3 class="toolset-headline">Announcements & Deadlines</h2>
+            <h3 class="toolset-headline">Announcements & Deadlines</h3>
               <dl>
                 <dt>April 29</dt>
                 <dd><a href="http://bit.ly/2PDLxJZ">Biweekly pay date (PDF)</a></dd>
@@ -306,13 +529,13 @@
         </div>
         <div class="col-md-4">
           <div class="toolset-container">
-            <h3 class="toolset-headline">Tools</h2>
+            <h3 class="toolset-headline">Tools</h3>
 
               <div class="panel-group" id="accordion">
                 <div class="panel">
                   <div class="panel-heading">
                     <h5 class="panel-title">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                         Blink Topics
                       </a>
                     </h5>
@@ -338,7 +561,7 @@
                 <div class="panel">
                   <div class="panel-heading">
                     <h5 class="panel-title">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                         Personal Tools
                       </a>
                     </h5>
@@ -369,7 +592,7 @@
                 <div class="panel">
                   <div class="panel-heading">
                     <h5 class="panel-title">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                         Business Tools
                       </a>
                     </h5>
@@ -407,7 +630,7 @@
                 <div class="panel">
                   <div class="panel-heading">
                     <h5 class="panel-title">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
                         Instruction Tools
                       </a>
                     </h5>
@@ -441,7 +664,7 @@
                 <div class="panel">
                   <div class="panel-heading">
                     <h5 class="panel-title">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
                         Research Tools
                       </a>
                     </h5>
@@ -471,19 +694,29 @@
         </div>
         <div class="col-md-4">
           <div class="toolset-container">
-            <h3 class="toolset-headline">My Blink</h2>
 
+            <div id="popular-onblink" style="">
+              <h3 class="toolset-headline">Popular on Blink</h3>
+              Some content goes here.
+            </div>
 
-                <span class="styled" id="_myblink_toolbox">
-                  <a href="#">Activate MyBlink</a>
-                </span>
+            <h3 class="toolset-headline">My Blink</h3>
 
+              <span class="styled" id="_myblink_toolbox">
+                <a id="myblink-login" href="#">Activate MyBlink</a>
+              </span>
         </div>
+
+
+
         </div>
     </div>
   </div>
+</div>
 
 </main>
+
+
 
 
 <footer class="footer">
@@ -510,49 +743,26 @@
 	</div>
 </footer>
 
-<script src="scripts/jquery.min.js"></script>
+  <!-- CMS Common Scripts -->
+  <script src="https://cdn.ucsd.edu/cms/decorator-5/scripts/jquery.min.js"></script>
+  <script src="https://cdn.ucsd.edu/cms/decorator-5/scripts/bootstrap.min.js"></script>
 
-<script src="scripts/bootstrap.min.js"></script>
+  <script src="https://cdn.ucsd.edu/cms/decorator-5/scripts/vendor.min.js"></script>
+  <script src="https://cdn.ucsd.edu/cms/decorator-5/scripts/base.min.js"></script>
 
-<script src="scripts/vendor.min.js"></script>
+  <!-- Blink Common Scripts -->
+  <script src="scripts/blink.js"></script>
 
-<script src="scripts/base.min.js"></script>
+  <!-- Blink Home Scripts -->
+  <script src="scripts/vendor/moment.min.js"></script>
+  <script src="scripts/blink-home.js"></script>
 
-
-
-<script src="https://blink.ucsd.edu/_resources/js/sso-manager.js" type="text/javascript"></script>
-
-
-<script type="text/javascript">
-function jsonpCallback(jsonStr) {
-        var json = JSON.parse(jsonStr);
-        $('#_myblink_toolbox').html(json.message);
-    }
-
-function myBlinkLogout() {
-    alert("click");
-    // delete cookie
-    document.cookie = '_myblink_user=; Path=/; domain=.ucsd.edu; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    $.ajax('https://act.ucsd.edu/myblink-client/bookmarks/j-logout.htm');
-}
-</script>
-<script src="https://act.ucsd.edu/myblink-client/bookmarks/getItemsV2.htm" type="text/javascript"></script>
-
-<script type="text/javascript">
-
-$("#_myblink_toolbox > div > div.span12.mb-right > ul > li:nth-child(5) > a").text(function () {
-    return $(this).text().replace("of MyBlink", "");
-})
-
-
-</script>
-
-<script type="text/javascript">
-  $(".toolset-container").matchHeight({
-    property: 'min-height'
-  });
-</script>
-
+  <!-- MyBlink -->
+  <script src="https://blink.ucsd.edu/_resources/js/myblink-homepage.js"></script>
+  <script src="https://blink.ucsd.edu/_resources/js/sso-manager.js"></script>
+  <script src="https://act.ucsd.edu/myblink-client/bookmarks/getItemsV2.htm"></script>
+  <!-- Shib timeout -->
+  <img src="https://a4.ucsd.edu/tritON/imagebug" alt=" " style="display: none;"/>
 
 </body>
 </html>
