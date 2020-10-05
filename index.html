@@ -15,6 +15,8 @@
     <link href="https://cdn.ucsd.edu/cms/decorator-5/styles/base.min.css" rel="stylesheet"/>
     <link href="css/blink.css" rel="stylesheet">
 
+
+
 </head>
 <body>
 
@@ -54,14 +56,13 @@
 
               <form action="/search/index.html" aria-label="Search Box" class="navbar-form navbar-right navbar-search no-gutter search-form" id="cse-search-box" method="get" role="search">
                 <label class="radio-inline" for="searchUCSD">
-                  <input aria-label="Search Blink" checked="checked" id="searchUCSD" name="search-scope" role="radiogroup" type="radio" value="cascade-cwp" /> Search Blink
+                  <input aria-label="Search Blink" checked="checked" id="searchUCSD" name="search-scope" role="radiogroup" type="radio" value="blink" /> Search Blink
                 </label>
                 <label class="radio-inline" for="searchFaculty">
                   <input aria-label="Search Faculty and Staff" id="searchFaculty" name="search-scope" role="radiogroup" type="radio" value="faculty-staff" /> Search Faculty/Staff
                 </label>
                 <div class="input-group">
-                  <input aria-label="Search Box" class="form-control input-search directorySearch facultySearch" data-id="inputSearch" id="q" name="search-term" placeholder="Search Blink" type="search" value="" />
-                  <input name="site" type="hidden" value="cascade-cwp" />
+                  <input aria-label="Search Box" class="form-control input-search directorySearch facultySearch" data-id="inputSearch" id="q" name="q" placeholder="Search Blink" type="search" value="" />
                   <span class="input-group-btn">
                     <button class="btn btn-primary search-icon search-expand" id="search-icon-button" onclick="submitForm()" type="button">
                       <img alt="search-icon" class="img-responsive" src="https://www.ucsd.edu/_resources/img/icon_search.png" />
@@ -98,21 +99,21 @@
 					<span class="search-icon"></span>
 				</a>
 				<div class="dropdown-menu dropdown-search">
-					<form action="/search/index.html" aria-label="Mobile Search Box" class="navbar-search form-inline mobile-search-form" role="search">
+					<form action="https://blink.ucsd.edu/search/index.html" aria-label="Mobile Search Box" class="navbar-search form-inline mobile-search-form" role="search">
 						<div class="input-group nav-search-mobile">
-							<input aria-label="Mobile Search Box" class="form-control input-search is-mobile" data-id="inputSearchMobile" id="q" name="search-term" placeholder="Search in UC San Diego" type="search" />
-							<input name="site" type="hidden" value="cascade-cwp" />
+							<input aria-label="Mobile Search Box" class="form-control input-search is-mobile" data-id="inputSearchMobile" id="q" name="q" placeholder="Search in UC San Diego" type="search" />
 							<span class="input-group-btn">
 								<button class="btn btn-primary search-icon search-expand mobile-search-icon" type="button">
 									<img alt="search-icon" src="https://www.ucsd.edu/_resources/img/icon_search.png" />
 								</button>
 							</span>
 						</div>
-						<label class="radio-inline" for="searchUCSDMobile">
-							<input aria-label="Search UC San Diego on Mobile Device" checked="checked" id="searchUCSDMobile" name="t" onclick="setSearch('web')" role="radiogroup" type="radio" value="web" /> Search Blink
-						</label>
+
 						<label class="radio-inline" for="searchFacultyMobile">
 							<input aria-label="Search Faculty and Staff on Mobile Device" id="searchFacultyMobile" name="t" onclick="setSearch('directory')" role="radiogroup" type="radio" value="directory" /> Search Faculty/Staff
+						</label>
+            <label class="radio-inline" for="searchUCSDMobile">
+							<input aria-label="Search UC San Diego on Mobile Device" checked="checked" id="searchUCSDMobile" name="t" onclick="setSearch('web')" role="radiogroup" type="radio" /> Search Blink
 						</label>
 						<input class="sr-only" type="submit" value="Submit" />
 					</form>
@@ -433,10 +434,15 @@
       <div class="row">
           <div class="col-md-12">
             <h1 id="personal-greeting"></h1>
-            <input type="search" id="blinksearch" name="blinksearch" placeholder="Search Blink">
+            <form action="https://blink.ucsd.edu/search/index.html" method="get">
+              <input type="search" aria-label="Search Blink" id="blinksearch" class="blinksearch" name="q" placeholder="Search Blink" class="gcse-search" enableAutoComplete="true"><button class="btn btn-default" aria-label="Search" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+            </form>
+
+
+
             <div id="button-container" class="container">
               <div class="row">
-                <p>Can’t find what you’re looking for? <a href="#">Check the Service Hub</a>.</p>
+                <p>Can’t find what you’re looking for? <a href="https://go.ucsd.edu/3jUwGJD">Check the Services & Support portal</a>.</p>
               </div>
             </div>
 
@@ -463,7 +469,7 @@
 
               <div class="col-sm-4 no-gutter">
                 <div class="panel panel-default" style="min-height: 428.672px;">
-                  <img alt="Scripps pier" class="img-responsive" src="https://department.ucsd.edu/_images/image-library/cta/aerial-view-scripps-pier.png">
+                  <img alt="Scripps pier" class="img-responsive" src="images/homepage/new-blink.jpg">
                   <div class="panel-heading">
                     <p class="panel-news-date small">April 1, 2020</p>
                     <h4 class="panel-news-title" style="min-height: 126px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
@@ -737,7 +743,7 @@
 		        </ul>
 	        </div>
 	        <div class="col-sm-4">
-            <img src="http://cdn.ucsd.edu/developer/decorator/5.0.2/img/ucsd-footer-logo-white.png" alt="" class="img-responsive footer-logo" />
+            <a href="https://ucsd.edu/" alt="Link to UCSD homepage"><img src="http://cdn.ucsd.edu/developer/decorator/5.0.2/img/ucsd-footer-logo-white.png" alt="" class="img-responsive footer-logo" /></a>
 		    </div>
 		</div>
 	</div>
@@ -763,6 +769,6 @@
   <script src="https://act.ucsd.edu/myblink-client/bookmarks/getItemsV2.htm"></script>
   <!-- Shib timeout -->
   <img src="https://a4.ucsd.edu/tritON/imagebug" alt=" " style="display: none;"/>
-
+  <script async="async" src="https://cse.google.com/cse.js?cx=018004871191465680600:if0pbfs1amc"></script>
 </body>
 </html>

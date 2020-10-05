@@ -24,9 +24,10 @@ function getGreetingTime (m) {
 /* USE */
     //The var "humanizedGreeting" below will equal (assuming the time is 8pm) "Good evening, James."
     var day = moment().format('dddd');
-    var date = moment().format('MMMM D');
+    var month = moment().format('MMMM');
+		var dayNo = moment().format('D');
     // var user = ", Cristian";
-    var humanizedGreeting = "Good " + getGreetingTime(moment()) + ". It's "+ day +", "+ date +".";
+    var humanizedGreeting = "Good " + getGreetingTime(moment()) + ". It's "+ day +", "+ month +"&nbsp;"+ dayNo +".";
 
     $("#personal-greeting").append(humanizedGreeting);
 
@@ -63,6 +64,8 @@ function myBlinkLogout() {
       url: "https://act.ucsd.edu/myblink-client/bookmarks/j-logout.htm",
       dataType: "script"
     });
+
+		$('#popular-onblink').show();
 }
 
 

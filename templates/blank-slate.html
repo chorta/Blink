@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/base.min.css">
+    <link href="../css/blink.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="styles/ie-support.css"/>
@@ -195,8 +196,25 @@
     <div class="row">
 
       <div class="col-md-12">
-        <h1>Blank Slate Template</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <section class="jumbotron jumbotron-full-width contact-module error-page">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+              <h1>Page Not Found</h1>
+              <div id="blink_tlp_content">
+              <h2 class="h2-404">What are you looking for?</h2>
+              <form action="https://blink.ucsd.edu/search/index.html" method="get"><input aria-label="Search Blink" class=" blinksearch-404" enableautocomplete="true" name="q" placeholder="Search Blink" type="search" /> <button aria-label="Search" class="btn btn-404" type="submit"> <span class="glyphicon glyphicon-search"></span> </button></form></div>
+              <p>If you want to request new Blink content or changes to existing content, please contact <span>&#160;</span> <a href="mailto:wts@ucsd.edu">wts@ucsd.edu</a>.</p>
+              <p>If you still can't find what you're looking for, <a href="https://eforms.ucsd.edu/view.php?id=252329/">let us know</a></p>
+              </div>
+            </div>
+          </div>
+          </section>
+          <style><!--
+          .breadcrumbs-list > li:nth-child(3) {
+          display: none;
+          }
+          --></style>
       </div>
 
     </div>

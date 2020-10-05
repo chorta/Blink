@@ -25,6 +25,11 @@
       color: #006a95;
     }
 
+    @media only screen and (max-width: 768px) {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+
 }
 
 /****** Last Updated */
@@ -206,4 +211,44 @@
     color: #666;
     padding-left: 10px;
     background: #fff url(../images/blink_sprite.gif) 0 0 no-repeat;
+}
+
+
+/***** 404 */
+
+
+.error-page {
+
+  margin: 0;
+
+  h1,h2 {
+    text-transform: none;
+  }
+
+  form {
+    margin: 40px 0;
+  }
+
+  .blinksearch-404 {
+    width: 65%;
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  .btn-404 {
+    background: #ffcd00;
+    color: #333;
+    text-transform: none;
+    vertical-align: middle;
+    margin: 0;
+    padding: 8px;
+    height: 44px;
+    line-height: 0;
+    min-width: 50px;
+    border: 1px solid #ffcd00;
+    border-radius: 0;
+  }
+
 }

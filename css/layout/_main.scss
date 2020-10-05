@@ -1,5 +1,11 @@
 /* Main Section Adjustments */
 
+.main-section {
+  a {
+    text-decoration: underline;
+  }
+}
+
 .main-section > h1:first-child {
     margin-top: 0;padding: 0;line-height: 1;
 }

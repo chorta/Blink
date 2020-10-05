@@ -253,11 +253,11 @@ $('input[data-id="inputSearchMobile"]').val(searchString);
 
 
     function setSearch(searchType) {
-      if (searchType == 'web') {
+      if (searchType == 'blink') {
         $('.search-form').attr('action', '/search/index.html');
         $('.mobile-search-form').attr('action', '/search/index.html');
-        $('input[data-id="inputSearch"]').attr('id', 'q').attr('name', 'search-term');
-        $('input[data-id="inputSearchMobile"]').attr('id', 'q').attr('name', 'search-term');
+        $('input[data-id="inputSearch"]').attr('id', 'q').attr('name', 'q');
+        $('input[data-id="inputSearchMobile"]').attr('id', 'q').attr('name', 'q');
 
       } else if (searchType == 'directory') {
         $('.search-form').attr('action', 'https://act.ucsd.edu/directory/search');
@@ -286,14 +286,16 @@ $('input[data-id="inputSearchMobile"]').val(searchString);
 
     function submitForm(e) {
         if (window.location.pathname === '/search/index.html') {
-              formSubmitFunction(e);
+              
+              $('.search-form').submit();
+
         } else {
       var term = $('input[data-id="inputSearch"]').val();
 
       if (term == "" && $('input[data-id="inputSearch"]')[2] !== undefined) {
         if (!$('input[data-id="inputSearch"]')[2].classList.contains('hidden') && $.trim($('input[data-id="inputSearch"]')[2].value) !== "") {
-            $('input[data-id="inputSearch"]')[2].value = $('input[data-id="inputSearch"]')[2].value;
-            //$('input[data-id="inputSearch"]')[2].setAttribute('name', 'search-term');
+            //$('input[data-id="inputSearch"]')[2].value = $('input[data-id="inputSearch"]')[2].value;
+            //$('input[data-id="inputSearch"]')[2].setAttribute('name', 'q');
             $('.search-form').submit();
           }
 
@@ -322,13 +324,13 @@ $('input[data-id="inputSearchMobile"]').val(searchString);
       if (term == "" && $('input[data-id="inputSearchMobile"]')[1] !== undefined) {
         if (!$('input[data-id="inputSearchMobile"]')[1].classList.contains('hidden') && $.trim($('input[data-id="inputSearchMobile"]')[1].value) !== "") {
             $('input[data-id="inputSearchMobile"]')[1].value = $('input[data-id="inputSearchMobile"]')[1].value;
-            $('input[data-id="inputSearchMobile"]')[1].setAttribute('name', 'search-term');
+            $('input[data-id="inputSearchMobile"]')[1].setAttribute('name', 'q');
             $('.mobile-search-form').submit();
           }
       } else {
         if (!$('input[data-id="inputSearchMobile"]').hasClass('hidden') && $.trim($('input[data-id="inputSearchMobile"]').val()) !== "") {
             $('input[data-id="inputSearchMobile"]')[0].value = $('input[data-id="inputSearchMobile"]')[0].value;
-            $('input[data-id="inputSearchMobile"]')[0].setAttribute('name', 'search-term');
+            $('input[data-id="inputSearchMobile"]')[0].setAttribute('name', 'q');
             $('.mobile-search-form').submit();
           }
       }
@@ -345,6 +347,123 @@ $('input[data-id="inputSearchMobile"]').val(searchString);
       submitMobileForm();
     });
 
+
+    $('.expand_accordion').click(function() { /* Expand all/collapse all function */
+         if ($(this).hasClass('accordion_expanded')) {
+         $('.expand_accordion').each(function (i) {
+                 $(this).removeClass("accordion_expanded");
+                 $(this).html("Expand all");
+                 $('.accordion h2').removeClass('head_expanded').next().hide();
+             });
+         }
+
+         else {
+           $('.expand_accordion').each(function (i) {
+                 $(this).addClass("accordion_expanded");
+                 $(this).html("Collapse all");
+                 $('.accordion h2').addClass('head_expanded').next().show();
+             });
+         };
+         window.location.hash = '';
+         return false;
+     });
+
+     function expander() {
+         $('.accordion_body').hide();
+         var hashCheck = window.location.hash
+         if (hashCheck) {
+             $('.accordion h2').each(function(index) {
+                 if (hashCheck == '#'+ $(this).find('a').text().replace(/\s/g,'-').substring(0,31)) {
+                     $(this).addClass('head_expanded').next().show();
+                     var newPosition = $(this).offset();
+                     setTimeout(function() {
+                         window.scrollTo(0, newPosition.top);
+                     }, 50);
+                 };
+             });
+         };
+     };
+
+     $('#tdr_content_content a[href*="#"]').click(function() {
+         var targetURL = $(this).attr("href").split('#');
+         if (String(targetURL[targetURL.length-2]).length == 0) { /* Ensure that the link goes to an anchor on the same page*/
+             var targetLetter = targetURL[1].substring(0,31);
+             var hashLetter = '- '+ targetLetter.replace(/\s/g,'').toUpperCase() + ' -';
+             $('.accordion h2').each(function () {
+                 targetDrawer = $(this).find('a').text().replace(/\s/g, '-').substring(0,31);
+                 if ($(this).find('a').text() == hashLetter || targetDrawer == targetLetter) {
+                     $('.accordion h2').removeClass('head_expanded').next().hide();
+                     $(this).addClass('head_expanded').next().show();
+                     var newPosition = $(this).offset();
+                     window.scrollTo(newPosition.left,newPosition.top);
+                 };
+             });
+         };
+     });
+
+     $(window).bind('load', expander);
+
+     $('.faq_question').click(function() {
+   $(this).next().toggle();
+
+   window.location.hash = $(this).text().replace(/\s/g,'-').substring(0,31);
+   return false;
+ }).next().hide();
+
+ function faq_expander() {
+   $('.blink_faq_content').hide();
+   var hashCheck = window.location.hash;
+   if (hashCheck) {
+     $('.faq_question').each(function(index) {
+       if (hashCheck == '#'+ $(this).text().replace(/\s/g,'-').substring(0,31)) {
+         $(this).next().toggle();
+         var newPosition = $(this).offset();
+         setTimeout(function() {
+             window.scrollTo(0, newPosition.top);
+         }, 50);
+       };
+     });
+   };
+ };
+
+ $(window).bind('load', faq_expander);
+
+ $('.faq_expand_all').click(function() {
+
+   if($(this).hasClass('faq_all_expanded')) {
+     $('.faq_all_expanded').each(function (i) {
+           $(this).removeClass("faq_all_expanded");
+           $(this).html("Expand all");
+     });
+
+     $('.faq_question').next().hide();
+     $('.faq_expand_some').removeClass("faq_some_expanded");
+     $('.faq_expand_some').html("Expand section");
+   } else {
+     $('.faq_expand_all').each(function (i) {
+       $(this).addClass("faq_all_expanded");
+       $(this).html("Collapse all");
+     });
+     $('.faq_question').next().show();
+     $('.faq_expand_some').addClass("faq_some_expanded");
+     $('.faq_expand_some').html("Collapse section");
+   };
+   return false;
+ });
+
+ $('.faq_expand_some').click(function() {
+   if($(this).hasClass('faq_some_expanded')) {
+     $(this).removeClass("faq_some_expanded");
+     $(this).html("Expand section");
+     $('.faq_question.'+$(this).attr('rel')).next().hide();
+   } else {
+     $(this).addClass("faq_some_expanded");
+     $(this).html("Collapse section");
+     $('.faq_question.'+$(this).attr('rel')).next().show();
+   };
+
+   return false;
+ });
 
 // get system status from statuspage.io
     $.ajax({
@@ -366,12 +485,12 @@ $('input[data-id="inputSearchMobile"]').val(searchString);
     var status = data.status.indicator;
 
     if (status === 'critical' || status === 'major') {
-        var html = '<a href="http://status.ucsd.edu/">Some systems and services are unavailable.</a>';
+        var html = '<a href="http://status.ucsd.edu/">Some systems are unavailable.</a>';
         jQuery('.status-indicator').addClass('warning');
         jQuery('.system-status-message').html(html);
 
     } else if (status === 'minor') {
-        var html = '<a href="http://status.ucsd.edu/">Some systems and services are slow.</a>';
+        var html = '<a href="http://status.ucsd.edu/">Some systems moderately impacted.</a>';
         jQuery('.status-indicator').addClass('issue');
         jQuery('.system-status-message').html(html);
 
