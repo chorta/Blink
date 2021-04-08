@@ -223,15 +223,191 @@
 .layout-title {
   height: 140px;
 }
+@media (max-width: 991px) {
+  .layout-title {
+    height: 115px;
+    padding: 1em 0;
+  }
+}
+@media (max-width: 475px) {
+  .layout-title {
+    height: 75px;
+  }
+}
 
 .title-logo {
-  background: url(https://blink.ucsd.edu/_resources/images/blink-logo-x2.png);
-  background-size: 122px;
+  background: none;
+  background-size: 105px;
   background-repeat: no-repeat;
   display: block !important;
   height: 65px;
   margin-top: 23px;
   float: left;
+}
+@media (max-width: 4995px) {
+  .title-logo {
+    margin-top: 15px;
+  }
+}
+
+#logo-container {
+  width: 360px;
+  height: 73px;
+  background: url("../images/ucsd-blink.svg");
+  background-repeat: no-repeat;
+  float: left;
+  margin-top: 10px;
+}
+@media (max-width: 1199px) {
+  #logo-container {
+    width: 360px;
+    position: absolute;
+  }
+}
+@media (max-width: 520px) {
+  #logo-container {
+    width: 60%;
+  }
+}
+@media (max-width: 475px) {
+  #logo-container {
+    width: 53%;
+    margin-top: 0;
+  }
+}
+@media (max-width: 339px) {
+  #logo-container {
+    width: 48%;
+  }
+}
+
+a.title-logo.ucsd-logo {
+  background-size: 193px;
+  width: 193px;
+}
+@media (max-width: 1199px) {
+  a.title-logo.ucsd-logo {
+    background-size: 397px;
+    width: 180px;
+  }
+}
+@media (max-width: 475px) {
+  a.title-logo.ucsd-logo {
+    background-size: 190px 46px;
+    width: 87px;
+    height: auto;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) {
+  a.title-logo.ucsd-logo {
+    background-size: 423px;
+    background-repeat: no-repeat;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) and (max-width: 1199px) {
+  a.title-logo.ucsd-logo {
+    background-size: 396px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) and (max-width: 499px) {
+  a.title-logo.ucsd-logo {
+    background-size: 245px;
+    width: 115px;
+  }
+}
+
+.col-sm-3.pull-left.top-logo {
+  padding: 0;
+  width: 221px;
+}
+@media (max-width: 1199px) {
+  .col-sm-3.pull-left.top-logo {
+    height: 80px;
+    width: 206px;
+  }
+}
+@media (max-width: 475px) {
+  .col-sm-3.pull-left.top-logo {
+    height: 49px;
+    width: 92px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) and (max-width: 1199px) {
+  .col-sm-3.pull-left.top-logo {
+    width: 209px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) and (max-width: 499px) {
+  .col-sm-3.pull-left.top-logo {
+    width: 128px;
+    height: 56px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) and (max-width: 375px) {
+  .col-sm-3.pull-left.top-logo {
+    width: 125px;
+  }
+}
+
+a.title-logo.blink-logo {
+  background-size: 105px;
+  width: 105px;
+}
+@media (max-width: 1199px) {
+  a.title-logo.blink-logo {
+    background-size: 105px;
+    width: 105px;
+  }
+}
+@media (max-width: 475px) {
+  a.title-logo.blink-logo {
+    background-size: 47.5px;
+    width: 95px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) {
+  a.title-logo.blink-logo {
+    background-size: 105px;
+    background-repeat: no-repeat;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) and (max-width: 499px) {
+  a.title-logo.blink-logo {
+    background-size: 55px;
+    max-width: 65px;
+    height: 35px;
+  }
+}
+
+.col-sm-2.pull-left.top-logo {
+  padding-right: 0;
+  padding-left: 30px;
+  width: 115px;
+}
+@media (max-width: 1199px) {
+  .col-sm-2.pull-left.top-logo {
+    height: 80px;
+    width: 140px;
+    padding-left: 27px;
+  }
+}
+@media (max-width: 475px) {
+  .col-sm-2.pull-left.top-logo {
+    height: 49px;
+    padding-left: 5px;
+    width: 59px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) and (max-width: 499px) {
+  .col-sm-2.pull-left.top-logo {
+    width: 70px;
+    padding-left: 20px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1) and (max-width: 375px) {
+  .col-sm-2.pull-left.top-logo {
+    padding-left: 15px;
+  }
 }
 
 /****** Date and Status Component */
@@ -240,6 +416,21 @@
   height: 30px;
   margin-bottom: 15px;
   width: 100%;
+}
+@media (max-width: 991px) {
+  .ds-container {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 520px) {
+  .ds-container {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 475px) {
+  .ds-container {
+    margin-top: 5px;
+  }
 }
 
 .si-container {
@@ -279,6 +470,12 @@
   background: #008a4a;
 }
 
+@media (max-width: 991px) {
+  .system-status {
+    font-size: 13px;
+    padding-top: 3px;
+  }
+}
 a.title-header {
   display: none;
 }
@@ -718,9 +915,6 @@ a.title-header {
   }
 }
 @media (max-width: 991px) {
-  .sb-container .ds-container {
-    margin-top: 35px;
-  }
   .sb-container .navbar-form {
     display: none;
   }
@@ -909,6 +1103,16 @@ a.title-header {
 input#q, .sb-container .navbar-form .input-group > .form-control {
   height: 48px;
   width: 276px;
+}
+@media (max-width: 1200px) {
+  input#q, .sb-container .navbar-form .input-group > .form-control {
+    width: 160px;
+  }
+}
+@media (max-width: 767px) {
+  input#q, .sb-container .navbar-form .input-group > .form-control {
+    width: 95%;
+  }
 }
 
 /****** UCSD NAV */
@@ -1927,6 +2131,9 @@ a.navbar-toggle {
 /* Main Section Adjustments */
 .main-section a {
   text-decoration: underline;
+}
+.main-section a.text-link {
+  text-decoration: none;
 }
 
 .main-section > h1:first-child {
