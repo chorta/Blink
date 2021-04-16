@@ -2094,6 +2094,114 @@ a.navbar-toggle {
     display: block !important;
   }
 }
+/****** UCSD NAV - TOOLBAR ADJUSTMENTS */
+nav#toolbar-nav {
+  background-color: #182b49 !important;
+  z-index: 990;
+  height: auto;
+  min-height: auto;
+  clear: both;
+}
+
+#toolbar-nav .toolbar-wrap {
+  background-color: #182b49;
+}
+
+#toolbar-nav .navbar-nav > li > .dropdown-menu {
+  background-color: #102b49;
+  border: none;
+}
+
+#toolbar-nav .navbar-nav > li > .dropdown-menu > li:hover,
+#toolbar-nav .navbar-nav > li > .dropdown-menu > li:focus {
+  background-color: #00629b;
+}
+
+#toolbar-nav .navbar-header > .navbar-brand {
+  margin-left: 0;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  padding-left: 0;
+}
+
+#toolbar-nav .navbar-header > .navbar-brand:hover {
+  color: #fff;
+}
+
+#toolbar-nav .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+#navbar-collapse-toolbar {
+  background-color: #182b49;
+}
+
+#toolbar-nav .tool-title {
+  color: #fff;
+  padding: 15px;
+  display: block;
+  line-height: 18px;
+  margin-top: 4px;
+}
+
+#toolbar-nav .navbar-toggle {
+  float: left;
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+#navbar-collapse-toolbar .navbar-nav.small-nav .dropdown-menu {
+  background-color: #00629b;
+}
+
+#navbar-collapse-toolbar .navbar-nav.small-nav > li:last-of-type {
+  border-bottom: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #navbar-collapse-toolbar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #toolbar-nav .navbar-nav,
+#toolbar-nav .navbar-nav > li {
+    float: left;
+  }
+
+  #toolbar-nav .navbar-nav > li > a {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 18px;
+  }
+
+  #toolbar-nav .navbar-nav > li > a:hover,
+#toolbar-nav .navbar-nav > li > a:focus {
+    background-color: #00629b;
+  }
+
+  #toolbar-nav .navbar-nav .toolbar-icon {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+
+  #toolbar-nav .navbar-nav .caret {
+    margin-top: 5px;
+  }
+
+  #navbar-collapse-toolbar {
+    background-color: #182b49;
+  }
+
+  #toolbar-nav .navbar-header > .navbar-brand {
+    margin-left: 15px;
+  }
+}
 .main-content-nav > ul {
   font-size: 0.92em;
 }
@@ -2526,5 +2634,3 @@ a.navbar-toggle {
 .gcalLabel {
   width: 91%;
 }
-
-/*# sourceMappingURL=blink.css.map */
