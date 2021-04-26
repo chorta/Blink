@@ -90,7 +90,7 @@
   
   .jumbotron-news-events {
 	  #news-section {
-			padding-bottom: 2em;
+			padding: 0 0 2em 0;
 			border-bottom: 1px solid #eee;
 			margin-bottom: 3.5em;
 	  }
@@ -256,11 +256,22 @@
     margin-bottom: 20px !important;
 
   }
-
+  
   .toolset-container {
     background: #fff;
     /*min-height: 420px;*/
     padding: 15px 25px;
+
+	 .toolset-link { 
+		text-decoration: underline;
+	   margin-bottom: 25px;
+	   a {
+		   color: #00629b;
+		   &:hover {
+			   color: #182b49;
+		   }
+	   }
+	 }
 
     dd {
       margin-bottom: 15px;
@@ -383,16 +394,14 @@
 
 
 #MyBlink-Button {
-    /* background: #c69214; */
-    padding: 5px;
-    text-align: center;
-    width: 145px;
-    border: 2px solid #c69214;
-    border-radius: 2px;
-
     a {
-      color: #016591;
-    }
+      color: #fff;
+      padding: 10px 15px;
+      background-color: #00629b;
+       &:hover {
+		    background-color: #182b49;
+	    }
+    }    
 }
 
 #_myblink_toolbox > a {

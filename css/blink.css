@@ -2338,7 +2338,7 @@ nav#toolbar-nav {
 
 /* News and Events Stlyes */
 .jumbotron-news-events #news-section {
-  padding-bottom: 2em;
+  padding: 0 0 2em 0;
   border-bottom: 1px solid #eee;
   margin-bottom: 3.5em;
 }
@@ -2495,6 +2495,16 @@ nav#toolbar-nav {
   /*min-height: 420px;*/
   padding: 15px 25px;
 }
+.toolset-container .toolset-link {
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+.toolset-container .toolset-link a {
+  color: #00629b;
+}
+.toolset-container .toolset-link a:hover {
+  color: #182b49;
+}
 .toolset-container dd {
   margin-bottom: 15px;
 }
@@ -2572,16 +2582,13 @@ nav#toolbar-nav {
 
 /* End Panel Arrows */
 /* My Blink */
-#MyBlink-Button {
-  /* background: #c69214; */
-  padding: 5px;
-  text-align: center;
-  width: 145px;
-  border: 2px solid #c69214;
-  border-radius: 2px;
-}
 #MyBlink-Button a {
-  color: #016591;
+  color: #fff;
+  padding: 10px 15px;
+  background-color: #00629b;
+}
+#MyBlink-Button a:hover {
+  background-color: #182b49;
 }
 
 #_myblink_toolbox > a {

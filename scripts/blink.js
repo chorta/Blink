@@ -34,13 +34,13 @@ $(".main-nav").hover(navHoverIn, navHoverOut);
 
 //Tab Navigation
 
-$(".nav-group>a, .navbar-nav li>a").on("focus",function(){
+$(".nav-group>a, #navbar-collapse-grid .navbar-nav li>a").on("focus",function(){
 
     $(".main-nav").addClass("is-hover");
 
 });
 
-$(".nav-group>a, .navbar-nav li>a").on("blur",function(){
+$(".nav-group>a, #navbar-collapse-grid .navbar-nav li>a").on("blur",function(){
 
     $(".main-nav").removeClass("is-hover");
 
