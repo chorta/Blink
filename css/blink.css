@@ -2136,6 +2136,10 @@ a.navbar-toggle {
   text-decoration: none;
 }
 
+a.btn.styled-blue, a.btn.styled-yellow {
+  text-decoration: none;
+}
+
 .main-section > h1:first-child {
   margin-top: 0;
   padding: 0;
