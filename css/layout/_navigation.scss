@@ -65,7 +65,13 @@ a.navbar-toggle {
     margin: 10px;
 }
 
-
+a.navbar-toggle:focus,
+.search-icon.search-expand.dropdown-toggle:focus,
+a.dropdown-toggle:focus,
+.nav .open > a:focus {
+	outline: 5px auto -webkit-focus-ring-color;
+   outline-offset: 8px;
+}
 
 @media only screen and (min-width: 1200px) {
     .header-wrap .container, .nav-wrap .container {
@@ -253,5 +259,8 @@ nav#toolbar-nav {
 	}
 	#toolbar-nav .navbar-header > .navbar-brand {
 		margin-left: 15px;
+	}
+	#toolbar-nav .navbar-nav .dropdown-toggle:focus {
+		outline-offset: 1px;
 	}
 }
