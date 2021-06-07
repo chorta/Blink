@@ -223,6 +223,33 @@ nav#toolbar-nav {
 	border-bottom: none;
 }
 
+.navbar-default .navbar-header .navbar-toolbar-icon {
+	background-color: #d3d3d3;
+	margin: 10px;
+	padding: 0.1em;
+}
+.navbar-default .navbar-header .navbar-toolbar-icon .toolbar-icon {
+	padding: 1em;
+	background-image: url("/images/icons/wrench-icon.svg");
+	width: 30px;
+	background-repeat: no-repeat;
+	height: 29px;
+	background-size: 25px;
+	display: block;
+	background-position: center;
+}
+
+.navbar-default .navbar-header .navbar-toolbar-icon .toolbar-icon.close-toolbar-icon {
+	background-image: url(https://www.ucsd.edu/_resources/img/icon_close.png);
+	background-size: 15px;
+	background-color: #ffcd00;
+}
+
+.navbar-default .navbar-header .navbar-toolbar-icon[aria-expanded="true"] {
+	background-color: #ffcd00;
+}
+
+
 @media only screen and (min-width: 768px) { 
 	#navbar-collapse-toolbar {
 		margin-left: 0;
