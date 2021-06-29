@@ -27,7 +27,7 @@ function getGreetingTime (m) {
     var month = moment().format('MMMM');
 		var dayNo = moment().format('D');
     // var user = ", Cristian";
-    var humanizedGreeting = "Good " + getGreetingTime(moment()) + ". It's "+ day +", "+ month +"&nbsp;"+ dayNo +".";
+    var humanizedGreeting = "Good " + getGreetingTime(moment()) + ".<br/>It's "+ day +", "+ month +"&nbsp;"+ dayNo +".";
 
     $("#personal-greeting").append(humanizedGreeting);
 
