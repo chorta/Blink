@@ -97,14 +97,21 @@
 
       #newsitems {
         display: block;
-        max-height: 444px;
+        max-height: 456px;
         overflow: hidden;
         padding: 0;
 
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+
         .news-item {
-          float: left;
-          padding: 0 15px;
-          width: 50%;
+          display: inline-block;
+          /*float: left;*/
+          padding: 0;
+          /*width: 50%;*/
+          vertical-align: top;
+          min-height: 152px;
 
           @media (max-width:991px) {
             width: 100%;
