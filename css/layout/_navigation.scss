@@ -65,8 +65,19 @@ a.navbar-toggle {
     margin: 10px;
 }
 
+<<<<<<< HEAD
 
 /*
+=======
+a.navbar-toggle:focus,
+.search-icon.search-expand.dropdown-toggle:focus,
+a.dropdown-toggle:focus,
+.nav .open > a:focus {
+	outline: 5px auto -webkit-focus-ring-color;
+   outline-offset: 8px;
+}
+
+>>>>>>> 160fbdcf5ea00352637683ad97f909221f59590b
 @media only screen and (min-width: 1200px) {
     
 }
@@ -213,6 +224,33 @@ nav#toolbar-nav {
 	border-bottom: none;
 }
 
+.navbar-default .navbar-header .navbar-toolbar-icon {
+	background-color: #d3d3d3;
+	margin: 10px;
+	padding: 0.1em;
+}
+.navbar-default .navbar-header .navbar-toolbar-icon .toolbar-icon {
+	padding: 1em;
+	background-image: url("/images/icons/wrench-icon.svg");
+	width: 30px;
+	background-repeat: no-repeat;
+	height: 29px;
+	background-size: 25px;
+	display: block;
+	background-position: center;
+}
+
+.navbar-default .navbar-header .navbar-toolbar-icon .toolbar-icon.close-toolbar-icon {
+	background-image: url(https://www.ucsd.edu/_resources/img/icon_close.png);
+	background-size: 15px;
+	background-color: #ffcd00;
+}
+
+.navbar-default .navbar-header .navbar-toolbar-icon[aria-expanded="true"] {
+	background-color: #ffcd00;
+}
+
+
 @media only screen and (min-width: 768px) { 
 	#navbar-collapse-toolbar {
 		margin-left: 0;
@@ -250,6 +288,7 @@ nav#toolbar-nav {
 	#toolbar-nav .navbar-header > .navbar-brand {
 		margin-left: 15px;
 	}
+<<<<<<< HEAD
 }
 
 /** Blink Tools Nav */
@@ -261,3 +300,9 @@ nav#toolbar-nav {
     color: #333;
 }
 
+=======
+	#toolbar-nav .navbar-nav .dropdown-toggle:focus {
+		outline-offset: 1px;
+	}
+}
+>>>>>>> 160fbdcf5ea00352637683ad97f909221f59590b

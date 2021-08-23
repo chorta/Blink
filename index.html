@@ -97,11 +97,16 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar-collapse-grid" data-toggle="collapse" href="#">
-					<span class="sr-only">Toggle navigation</span>
+					<span class="sr-only">Toggle Main navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
+				<!-- Toolbar dropdown -->
+				<a aria-expanded="false" class="navbar-toolbar-icon navbar-toggle collapsed" data-target="#navbar-collapse-toolbar" data-toggle="collapse" href="#">
+					<span class="sr-only">Toggle Toolbar navigation</span>
+					<span class="toolbar-icon"></span>
+				</a>			 
 				<!-- mobile search dropdown -->
 				
 						
@@ -446,9 +451,11 @@
 <!-- end navbar -->
 
 <!-- begin toolbar nav -->
-
 <nav class="navbar navbar-default navbar-static-top" id="toolbar-nav">
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 160fbdcf5ea00352637683ad97f909221f59590b
 	
 	<div class="container-fluid toolbar-wrap">
 		<div class="container">                
@@ -655,7 +662,11 @@
 	                  <li><a href="https://blink.ucsd.edu/research/training/index.html">Training Resources</a></li>
 						</ul>
 					</li>
+<<<<<<< HEAD
 	            <li><a href="https://blink.ucsd.edu/_tool-page/"><img class="toolbar-icon" src="images/icons/all-tools-icon.svg"/> All</a></li>
+=======
+	            <li><a href="https://blink.ucsd.edu/_tool-page/" aria-label="All Tools"><img class="toolbar-icon" src="/images/icons/all-tools-icon.svg"/>All</a></li>
+>>>>>>> 160fbdcf5ea00352637683ad97f909221f59590b
 				</ul>
 	
 			</div>
@@ -673,7 +684,7 @@
           <div class="col-md-8">
 	         
 	         <div class="jumbosearch-container"> 
-	            <h1 id="personal-greeting"></h1>
+	            <h1 id="personal-greeting" aria-label="Blink Homepage"></h1>
 	            <form action="https://blink.ucsd.edu/search/index.html" method="get" id="jumbo-search">
 	              <input type="search" aria-label="Search Blink" id="blinksearch" class="blinksearch" name="q" placeholder="Search Blink" class="gcse-search" enableAutoComplete="true"><button class="btn btn-default" aria-label="Search" type="submit"><span class="glyphicon glyphicon-search"></span></button>
 	            </form>
