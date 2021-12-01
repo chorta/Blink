@@ -2018,18 +2018,7 @@ a.navbar-toggle {
   margin: 10px;
 }
 
-<<<<<<< HEAD
 /*
-=======
-a.navbar-toggle:focus,
-.search-icon.search-expand.dropdown-toggle:focus,
-a.dropdown-toggle:focus,
-.nav .open > a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: 8px;
-}
-
->>>>>>> 160fbdcf5ea00352637683ad97f909221f59590b
 @media only screen and (min-width: 1200px) {
 
 }
@@ -2239,10 +2228,6 @@ nav#toolbar-nav {
   #toolbar-nav .navbar-header > .navbar-brand {
     margin-left: 15px;
   }
-
-  #toolbar-nav .navbar-nav .dropdown-toggle:focus {
-    outline-offset: 1px;
-  }
 }
 /** Blink Tools Nav */
 #tools-nav-button {
@@ -2434,13 +2419,8 @@ nav#toolbar-nav {
 }
 .jumbotron-news-events .trident-icon {
   float: left;
-<<<<<<< HEAD
   padding-right: 10px;
   width: 35px;
-=======
-  padding-right: 15px;
-  width: 62px;
->>>>>>> 160fbdcf5ea00352637683ad97f909221f59590b
   height: auto;
 }
 .jumbotron-news-events h2 {
@@ -2448,13 +2428,7 @@ nav#toolbar-nav {
   margin: 0;
 }
 .jumbotron-news-events h3 {
-<<<<<<< HEAD
   font-size: 1.2em;
-=======
-  font-size: 1.3em;
-  font-weight: 500;
-  line-height: 1.3;
->>>>>>> 160fbdcf5ea00352637683ad97f909221f59590b
   text-transform: none;
   margin-top: 0;
   font-weight: 500;
