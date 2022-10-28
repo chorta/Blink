@@ -157,6 +157,12 @@ $(".search-icon.dropdown-toggle").click(
 function(){
 $(this).children().toggleClass("close-icon");
 
+});
+
+$(".navbar-toolbar-icon.navbar-toggle").click(
+function(){
+$(this).children().toggleClass("close-toolbar-icon");
+
 }
 // ,
 // function(){

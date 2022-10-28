@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="39px" viewBox="0 0 20 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>trident</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD-V8-Toolbar-Closed" transform="translate(-135.000000, -646.000000)" fill="#00629B">
-            <g id="News-&amp;-Events-Module" transform="translate(0.000000, 600.000000)">
-                <g id="News-Event-Module-Title" transform="translate(135.000000, 45.000000)">
-                    <g id="trident" transform="translate(10.500000, 20.000000) rotate(-90.000000) translate(-10.500000, -20.000000) translate(-9.000000, 10.000000)">
-                        <rect id="Rectangle" x="0.392578125" y="7.07617188" width="38" height="5"></rect>
-                        <rect id="Rectangle" x="0.392578125" y="0.076171875" width="26" height="5"></rect>
-                        <rect id="Rectangle" x="0.392578125" y="14.0761719" width="26" height="5"></rect>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 28.2 28.1" style="enable-background:new 0 0 28.2 28.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#00629B;}
+</style>
+<desc>Created with Sketch.</desc>
+<g>
+	<polygon class="st0" points="3.7,28.1 28.2,3.5 24.7,0 0,24.7 0,28.1 	"/>
+	<polygon class="st0" points="14.8,7.1 11.3,3.5 0,14.8 0,21.9 	"/>
+	<polygon class="st0" points="24.7,17 21.2,13.4 6.5,28.1 13.6,28.1 	"/>
+</g>
 </svg>
