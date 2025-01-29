@@ -1,0 +1,36 @@
+/* Accessibility  Changes */
+
+
+/*HEADER*/
+
+.screen-reader{
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    white-space:nowrap;
+    width:1px 
+}
+.screen-reader-focusable:active,.screen-reader-focusable:focus{
+    clip:auto;
+    color:#fff;
+    height:40px;
+    margin:0;
+    overflow:visible;
+    position:relative;
+    white-space:normal;
+    width:auto;
+    background:#006100;
+    z-index:1100!important;
+    padding:10px;
+    top:8px 
+}
+
+/* BODY */
+
+
+
+/* FOOTER */
