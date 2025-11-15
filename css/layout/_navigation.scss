@@ -40,8 +40,9 @@ nav.navbar {
     z-index: 999;
 }
 
+/* updated from 1.4 to 1.5 to make top nav accessible for Interactive element.  11/2025 tm   */
 .main-nav li {
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 .main-nav .nav-group>a {
@@ -286,4 +287,8 @@ nav#toolbar-nav {
     padding: 6px 10px 2px 10px;
     margin: 10px 10px 5px 10px;
     color: #333;
+}
+/* updated from 23px to 24px to to meet SI accessibility  */
+.navbar-nav .open .dropdown-menu>li>a{
+	line-height:24px
 }
